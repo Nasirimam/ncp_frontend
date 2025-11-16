@@ -32,12 +32,7 @@ export default function Login() {
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));
 
-      toast.success("Login successful!");
-
-      setTimeout(() => {
-        navigate("/courses");
-        window.location.reload();
-      }, 700);
+      navigate("/");
     } catch (err) {
       toast.error(err.response?.data?.message || "Login failed");
     }
