@@ -23,14 +23,7 @@ function App() {
           <Route path="/login" element={<Login />} />
 
           {/* Protected Routes */}
-          <Route
-            path="/courses"
-            element={
-              <PrivateRoute>
-                <Courses />
-              </PrivateRoute>
-            }
-          />
+          <Route path="/courses" element={<Courses />} />
 
           <Route
             path="/checkout/:id"
